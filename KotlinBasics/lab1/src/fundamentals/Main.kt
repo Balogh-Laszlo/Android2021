@@ -1,15 +1,17 @@
 package fundamentals
 
-import sun.security.ec.point.ProjectivePoint
+
 import java.util.*
+import kotlin.random.Random
 
 fun main(){
+    // 1.
     val a = 2
     val b = 3
     println("$a+$b=${a+b}")
-   // Feladat 2.
+   // 2.
 
-    val daysOfWeek: List<String> = listOf("Monday", "Tuesday", "Wednesday","Thursday","Friday","Saturday","Sunday")
+    val daysOfWeek: List<String> = listOf("monday", "tuesday", "wednesday","thursday","friday","saturday","sunday")
     for(day in daysOfWeek){
         print("$day ")
     }
@@ -18,7 +20,7 @@ fun main(){
 //        day -> print(day)
 //    }
 
-    val filteredDays = daysOfWeek.filter{ it[0].equals('T')}
+    val filteredDays = daysOfWeek.filter{ it[0] == 'T'}
     for(day in filteredDays){
         print("$day ")
     }
@@ -31,41 +33,88 @@ fun main(){
 
     daysOfWeek.filter { it.length==6 }.forEach { print("$it ") }
     println()
+//    3.
     println(isPrime(244))
 
     val primes : MutableList<Int> = primesInRange(100)
     primes.forEach{
         print("$it ")
     }
+    println()
+//4.
+    val temp = "Random string"
+    val encodedString = encode(temp)
+    println(encodedString)
+    println(decode(encodedString))
+    val msg = messageCoding("Hello",::encode)
+    println(msg)
+    println(messageCoding(msg,::decode))
 
-//    messageCoding("Hello",::encode)
+    //6.
+    val numbers = listOf(2.3,4.12,3.14,3.15,6.27)
+    numbers.map { it*2 }.forEach { print("$it ") }
+    println()
+
+    daysOfWeek.map { it.toUpperCase() }.forEach { print("$it ") }
+    println()
+
+    daysOfWeek.map { it.capitalize() }.forEach { print(("$it ")) }
+    println()
+
+    daysOfWeek.map { it.length }.forEach { print("$it ") }
+    println()
+
+    println(daysOfWeek.map { it.length }.average())
+    //7.
+    val daysOfWeekMutable :MutableList<String> = daysOfWeek.toMutableList()
+    daysOfWeekMutable.replaceAll { it.capitalize() }
+
+    daysOfWeekMutable.removeIf { it.contains('n') }
+    daysOfWeekMutable.forEach { print("$it ") }
+    println()
+
+    for((index,value) in daysOfWeekMutable.withIndex()){
+        println("Item at $index is $value")
+    }
+    daysOfWeekMutable.sort()
+    daysOfWeekMutable.forEach { print("$it ") }
+    println()
+
+    //8.
+    val arr = Array(10){ Random.nextInt(0,100)}
+    arr.forEach { println(it) }
+    println("************")
+    arr.sort()
+    arr.forEach { println(it) }
+    println(arr.any { it%2==0 })
+    println(arr.all { it%2==0 })
+    var sum:Double = 0.0
+    arr.forEach { sum+=it }
+    println("The avarage of the generated array: ${sum/arr.size}")
+//    println(arr.average())
+
 }
-
+//3.
 fun isPrime(num:Int):Boolean{
     if(num == 0 || num == 1){
         return false
     }
-    if(num == 2){
-        return true
-    }
-    if(num == 3){
+    if (num == 2 || num == 3){
         return true
     }
     if(num%2 == 0){
         return false
     }
-    var i = 3
-    while (i<num/2){
-        if(num%i == 0){
+    for(i in 5..num/2 step 2){
+        if(num%i == 0) {
             return false
         }
-        i+=2
     }
     return true
 }
 
 fun primesInRange(range:Int):MutableList<Int>{
-    var primes:MutableList<Int> = mutableListOf()
+    val primes:MutableList<Int> = mutableListOf()
     for (i in 1..range){
         if(isPrime(i)){
             primes.add(i)
@@ -73,9 +122,16 @@ fun primesInRange(range:Int):MutableList<Int>{
     }
     return primes
 }
-//fun messageCoding(msg: String, func: (String) -> String): String{
-//
-//}
+//4.
+fun messageCoding(msg: String, func: (String) -> String): String{
+ return func(msg)
+}
 fun encode(msg:String):String{
     return Base64.getEncoder().encodeToString(msg.toByteArray())
 }
+
+fun decode(msg:String):String{
+    return String(Base64.getDecoder().decode(msg))
+}
+// 5.
+fun printEven(list:List<Int>):Unit = list.filter { it%2 == 0 }.forEach{ print("$it ") }
