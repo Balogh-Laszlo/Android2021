@@ -1,5 +1,0 @@
-package fundamentals
-
-fun main(){
-
-}
