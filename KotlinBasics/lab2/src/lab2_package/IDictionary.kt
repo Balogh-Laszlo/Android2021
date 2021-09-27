@@ -1,8 +1,8 @@
-package fundamentals
+package lab2_package
 
 interface IDictionary {
-    fun add(String):Boolean
-    fun find(String):Boolean
+    fun add(word: String):Boolean
+    fun find(word: String):Boolean
     fun size():Int
     private companion object{
         val name = "IDictionaryInterface"
