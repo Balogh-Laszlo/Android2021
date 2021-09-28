@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1232cfa6-a898-44d0-b1df-98212460370d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lab2/src/lab2_package/DictionaryProvider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab2/src/lab2_package/DictionaryType.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab2/src/lab2_package/HashSetDictionary.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab2/src/lab2_package/TreeSetDictionary.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/fundamentals/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/lab2_package/ListDictionary.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/src/lab2_package/ListDictionary.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/lab2_package/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/src/lab2_package/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/META-INF/lab1.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/META-INF/lab1.kotlin_module" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Enum" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\lacob\AndroidStudioProjects\Android2021\KotlinBasics\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1yUBGJw68IUbmRWGspyX7fKz5HC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="fundamentals" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="lab2_package" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.lab2_package.MainKt">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="lab2" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lab1_package.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="lab1_package.MainKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lab2_package.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="lab2" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="lab2_package.MainKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.lab2_package.MainKt" />
+        <item itemvalue="Kotlin.lab1_package.MainKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1232cfa6-a898-44d0-b1df-98212460370d" name="Default Changelist" comment="" />
+      <created>1632296189318</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632296189318</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Proba">
+      <created>1632296498142</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632296498142</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Proba" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proba" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Project_Structure" timestamp="1632296697485">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1632296697485" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632744303465">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632744303465" />
+    <state x="560" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1632832685262">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="560" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632832685262" />
+    <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1632744493954">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632744493954" />
+    <state x="365" y="9" key="CommitChangelistDialog2" timestamp="1632296497244">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="365" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1632296497244" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1632836301879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632836301879" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1632316027619" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1632836301878">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632836301878" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1632316027619" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1632836301878">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632836301878" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1632316027619" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1632836301878">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632836301878" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1632316027619" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1632836301879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632836301879" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1632300762578" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1632836301879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632836301879" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1632300762578" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1632836301879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632836301879" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1632300762578" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1632836301879">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632836301879" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1632300762578" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1632296506610">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1632296506610" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1632820354391">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632820354391" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1632312108858" />
+    <state x="209" y="137" key="new project wizard" timestamp="1632743436916">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="137" key="new project wizard/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632743436916" />
+    <state x="209" y="137" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1632296231290" />
+    <state x="361" y="71" key="scopes" timestamp="1632744432227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="scopes/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1632744432227" />
+  </component>
+</project>
