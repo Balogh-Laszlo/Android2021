@@ -1,0 +1,50 @@
+Elso kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
+Masdodik kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
+Harmadik kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
+Negyedik kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
+Otodik kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
+Hatodik kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
+Hetedik kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
+Nyolcadik kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
+Kilencedik kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
+Tizedik kerdes?
+valasz1
+valasz2
+valasz3
+valasz4
