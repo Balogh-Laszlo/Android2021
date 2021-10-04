@@ -1,15 +1,15 @@
 package lab2_package
 
-import java.lang.Math.random
+
 import java.time.LocalDate
 import kotlin.random.Random
 
 
 fun main(){
 
-//    problem1()
+    problem1()
 //    problem2()
-    problem3()
+//    problem3()
 
 }
 fun problem1(){
@@ -55,32 +55,6 @@ fun problem2(){
     println(list.longest())
 }
 fun problem3(){
-    data class Date(var year:Int = LocalDate.now().year, var month:Int = LocalDate.now().month.value, var day:Int = LocalDate.now().dayOfMonth) : Comparable<Date>{
-        override fun compareTo(other: Date): Int {
-            when {
-                this.year > other.year -> {
-                    return 1
-                }
-                this.year < other.year -> {
-                    return -1
-                }
-                else -> {
-                    return if(this.month > other.month){
-                        1
-                    } else if(this.month < other.month){
-                        -1
-                    } else{
-                        if(this.day > other.day){
-                            1
-                        } else {
-                            0
-                        }
-                    }
-                }
-            }
-        }
-
-    }
     fun Date.leapYear():Boolean{
         if (year % 4 == 0) {
             if (year % 100 == 0) {
@@ -146,7 +120,7 @@ fun problem3(){
     val compareByDay = Comparator<Date>{
         d1:Date , d2:Date -> d1.day - d2.day
     }
-    dates.sortedWith(compareByDay)
+    dates.sortWith(compareByDay)
     dates.forEach { println("${it.year}-${it.month}-${it.day}") }
 
 
