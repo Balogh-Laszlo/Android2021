@@ -4,9 +4,9 @@ import java.io.File
 import java.util.*
 
 object TreeSetDictionary : IDictionary {
-    private val words: TreeSet<String> = TreeSet()
+    val words: TreeSet<String> = TreeSet()
     init {
-        File("C:\\Users\\lacob\\AndroidStudioProjects\\Android2021\\KotlinBasics\\lab2\\src\\lab2_package\\in.txt").forEachLine { this.add(it) }
+        File(IDictionary.path).forEachLine { this.add(it) }
     }
     override fun add(word: String): Boolean = words.add(word)
 
