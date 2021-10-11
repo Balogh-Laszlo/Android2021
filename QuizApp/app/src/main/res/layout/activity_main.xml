@@ -10,7 +10,7 @@
         android:id="@+id/tvQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:text="QUIZ"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -36,21 +36,37 @@
         android:id="@+id/btnGetStarted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@android:color/holo_orange_light"
         android:text="GET STARTED"
+        app:cornerRadius="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etYourName" />
+        app:layout_constraintTop_toBottomOf="@+id/ivImagePicker" />
 
     <Button
         android:id="@+id/btnContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:text="CHOOSE CONTACT"
+        app:cornerRadius="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGetStarted" />
+        app:layout_constraintTop_toBottomOf="@+id/etYourName" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivImagePicker"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="150dp"
+        android:background="#AFAFAF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnContact"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:srcCompat="@drawable/ic_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
