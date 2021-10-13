@@ -29,20 +29,38 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val TAG = "MAIN ACTIVITY"
         val CONTACT_PERMISSION_CODE = 440
-        val CONTACT_PICK_CODE = 441
         val EXTERNAL_PERMISSION_CODE = 442
-        val EXTERNAL_PICK_CODE = 443
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        initializeView()
+        registerListeners()
+    }
 
-        btnGetStarted = findViewById(R.id.btnGetStarted)
-        etYourName = findViewById(R.id.etYourName)
-        btnContact = findViewById(R.id.btnContact)
-        ivImagePicker = findViewById(R.id.ivImagePicker)
+    @SuppressLint("Range")
+    val getContact = registerForActivityResult(PickContact()) {
+        Log.i(TAG, "getContact result ${it.toString()}")
+        val cursor: Cursor
+
+        cursor = contentResolver.query(it!!, null, null, null, null)!!
+        if (cursor.moveToFirst()) {
+            var contactName =
+                cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
+            etYourName.setText(contactName)
+        }
+    }
+
+    val getPhoto = registerForActivityResult(PickPhoto()) { selectedUri ->
+        if (selectedUri != null) {
+            ivImagePicker.setImageURI(selectedUri)
+        }
+
+    }
+
+    private fun registerListeners() {
         btnGetStarted.setOnClickListener {
             val text = etYourName.text.toString()
             Log.i(TAG, "Button clicked, edit text's content: $text")
@@ -56,7 +74,7 @@ class MainActivity : AppCompatActivity() {
                 snack.show()
                 val intent = Intent(this, DisplayActivity::class.java)
                 intent.putExtra(EXTRA_NAME, text)
-                intent.putExtra(EXTRA_URI,selectedUri.toString())
+                intent.putExtra(EXTRA_URI, selectedUri.toString())
                 startActivity(intent)
 
             } else {
@@ -67,7 +85,7 @@ class MainActivity : AppCompatActivity() {
         }
         btnContact.setOnClickListener {
             if (checkContactPermission()) {
-                pickContact()
+                getContact.launch(0)
             } else {
                 requestContactPermission()
             }
@@ -75,11 +93,18 @@ class MainActivity : AppCompatActivity() {
 
         ivImagePicker.setOnClickListener {
             if (isReadExternalPermissionGranted()) {
-                launchIntentForPhoto()
+                getPhoto.launch(0)
             } else {
                 requestReadExternalPermission()
             }
         }
+    }
+
+    private fun initializeView() {
+        btnGetStarted = findViewById(R.id.btnGetStarted)
+        etYourName = findViewById(R.id.etYourName)
+        btnContact = findViewById(R.id.btnContact)
+        ivImagePicker = findViewById(R.id.ivImagePicker)
     }
 
     private fun isReadExternalPermissionGranted(): Boolean {
@@ -107,11 +132,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun pickContact() {
-        val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
-        startActivityForResult(intent, CONTACT_PICK_CODE)
-    }
-
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -121,13 +141,13 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == CONTACT_PERMISSION_CODE) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                pickContact()
+                getContact.launch(0)
             } else {
                 Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show()
             }
         } else if (requestCode == EXTERNAL_PERMISSION_CODE) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                launchIntentForPhoto()
+                getPhoto.launch(0)
             } else {
                 Toast.makeText(
                     this,
@@ -139,45 +159,9 @@ class MainActivity : AppCompatActivity() {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         }
     }
-
-    private fun launchIntentForPhoto() {
-        val intent = Intent(Intent.ACTION_PICK)
-        intent.type = "image/*"
-        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, false)
-        startActivityForResult(Intent.createChooser(intent, "Choose pics"), EXTERNAL_PICK_CODE)
-    }
-
-
-    @SuppressLint("Range")
-        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-            super.onActivityResult(requestCode, resultCode, data)
-            if (requestCode == CONTACT_PICK_CODE) {
-                if (resultCode == RESULT_OK) {
-                    val cursor: Cursor
-
-                    val uri = data!!.data
-                    cursor = contentResolver.query(uri!!, null, null, null, null)!!
-                    if (cursor.moveToFirst()) {
-                        var contactName =
-                            cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
-                        etYourName.setText(contactName)
-                    }
-                    cursor.close()
-                } else {
-                    Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show()
-                }
-            }
-        else if(requestCode == EXTERNAL_PICK_CODE){
-            if(resultCode == RESULT_OK && data != null){
-                selectedUri = data.data
-                if(selectedUri!= null) {
-                    ivImagePicker.setImageURI(selectedUri)
-                }
-
-            }
-                else{
-                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show()
-            }
-            }
-        }
 }
+
+
+
+
+

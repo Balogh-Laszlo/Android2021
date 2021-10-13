@@ -17,7 +17,6 @@ class DisplayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display)
         tvText = findViewById(R.id.tvText)
-        tvText.text = "The name of the player is:"
         tvName = findViewById(R.id.tvName)
         tvName.text = intent.getStringExtra(EXTRA_NAME)
 
