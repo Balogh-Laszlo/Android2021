@@ -1,9 +1,8 @@
-package com.example.quizapp
+package com.example.quizapp.ActivityResult
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.provider.ContactsContract
 import android.util.Log
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity

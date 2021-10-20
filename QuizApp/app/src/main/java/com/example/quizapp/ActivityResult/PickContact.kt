@@ -1,4 +1,4 @@
-package com.example.quizapp
+package com.example.quizapp.ActivityResult
 
 import android.content.Context
 import android.content.Intent
@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class PickContact : ActivityResultContract<Int, Uri?>() {
     companion object{
-        val TAG = "PICK CONTACT"
+        const val TAG = "PICK CONTACT"
     }
     override fun createIntent(context: Context, ringtoneType: Int) =
         Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)

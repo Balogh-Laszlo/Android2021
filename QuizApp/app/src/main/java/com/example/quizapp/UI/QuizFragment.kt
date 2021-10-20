@@ -1,4 +1,4 @@
-package com.example.quizapp
+package com.example.quizapp.UI
 
 
 import android.os.Bundle
@@ -12,6 +12,8 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.quizapp.QuizController
+import com.example.quizapp.R
 import com.example.quizapp.Utils.Question
 import com.example.quizapp.Utils.QuestionType
 import com.example.quizapp.Utils.SharedViewModel
@@ -21,7 +23,7 @@ class QuizFragment : Fragment() {
 
     private lateinit var btnNext:Button
     private lateinit var tvQuestion : TextView
-    private lateinit var quiz:QuizController
+    private lateinit var quiz: QuizController
     private lateinit var rgAnswers : RadioGroup
     private var currentQuestion = 0
     private val checkBoxes = mutableListOf<CheckBox>()
@@ -39,7 +41,7 @@ class QuizFragment : Fragment() {
     ): View? {
         val callback : OnBackPressedCallback = object: OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
-                showdialog()
+                showDialog()
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,callback)
@@ -153,7 +155,7 @@ class QuizFragment : Fragment() {
         )
         rgAnswers = view.findViewById(R.id.rgAnswers)
     }
-    private fun showdialog() {
+    private fun showDialog() {
         AlertDialog.Builder(requireContext())
             .setTitle("Exit")
             .setMessage("Are you sure you want to end this quiz?")

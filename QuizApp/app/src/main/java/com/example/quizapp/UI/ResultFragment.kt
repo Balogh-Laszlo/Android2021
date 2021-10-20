@@ -1,4 +1,4 @@
-package com.example.quizapp
+package com.example.quizapp.UI
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.quizapp.R
 import com.example.quizapp.Utils.SharedViewModel
 
 

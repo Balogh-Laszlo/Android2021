@@ -11,4 +11,10 @@
     <string name="try_again">TRY AGAIN</string>
     <string name="next">NEXT</string>
     <string name="submit">SUBMIT</string>
+    <string name="item1">Item1</string>
+    <string name="item2">Item2</string>
+    <string name="item3">Item3</string>
+    <string name="quiz_app">Quiz App</string>
+    <string name="header_title">Menu options</string>
+    <string name="header_text">Enjoy the quiz</string>
 </resources>

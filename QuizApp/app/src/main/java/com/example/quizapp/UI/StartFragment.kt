@@ -1,4 +1,4 @@
-package com.example.quizapp
+package com.example.quizapp.UI
 
 import android.annotation.SuppressLint
 
@@ -20,6 +20,10 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
+import com.example.quizapp.MainActivity
+import com.example.quizapp.ActivityResult.PickContact
+import com.example.quizapp.ActivityResult.PickPhoto
+import com.example.quizapp.R
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -58,7 +62,7 @@ class StartFragment : Fragment() {
         }
     }
 
-    val getPhoto = registerForActivityResult(PickPhoto()) { selectedUri ->
+    private val getPhoto = registerForActivityResult(PickPhoto()) { selectedUri ->
         if (selectedUri != null) {
             ivImagePicker.setImageURI(selectedUri)
         }
@@ -119,7 +123,9 @@ class StartFragment : Fragment() {
 
     private fun requestReadExternalPermission() {
         val permission = arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE)
-        ActivityCompat.requestPermissions(requireActivity(), permission, MainActivity.EXTERNAL_PERMISSION_CODE)
+        ActivityCompat.requestPermissions(requireActivity(), permission,
+            MainActivity.EXTERNAL_PERMISSION_CODE
+        )
     }
 
     private fun checkContactPermission(): Boolean {
@@ -131,7 +137,9 @@ class StartFragment : Fragment() {
 
     private fun requestContactPermission() {
         val permission = arrayOf(android.Manifest.permission.READ_CONTACTS)
-        ActivityCompat.requestPermissions(requireActivity(), permission, MainActivity.CONTACT_PERMISSION_CODE)
+        ActivityCompat.requestPermissions(requireActivity(), permission,
+            MainActivity.CONTACT_PERMISSION_CODE
+        )
 
     }
 
