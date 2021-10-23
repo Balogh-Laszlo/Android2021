@@ -4,6 +4,7 @@ package com.example.quizapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentContainerView
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.appbar.MaterialToolbar
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var topAppBar: MaterialToolbar
+    private lateinit var nhFragment : FragmentContainerView
 
     companion object {
         const val TAG = "MAIN ACTIVITY"
@@ -35,7 +37,9 @@ class MainActivity : AppCompatActivity() {
             // Handle menu item selected
             menuItem.isChecked = true
             drawerLayout.close()
+
             true
+
         }
     }
 
@@ -45,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         drawerLayout = findViewById(R.id.drawerLayout)
         navigationView = findViewById(R.id.navigationView)
         topAppBar = findViewById(R.id.topAppBar)
+        nhFragment = findViewById(R.id.nhFragment)
     }
 
 }
