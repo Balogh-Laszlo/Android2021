@@ -43,10 +43,23 @@
         <action
             android:id="@+id/action_homeFragment_to_questionListFragment"
             app:destination="@id/questionListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newQuestionFragment"
+            app:destination="@id/newQuestionFragment" />
     </fragment>
     <fragment
         android:id="@+id/questionListFragment"
         android:name="com.example.quizapp.UI.QuestionListFragment"
         android:label="fragment_question_list"
         tools:layout="@layout/fragment_question_list" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.quizapp.UI.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/newQuestionFragment"
+        android:name="com.example.quizapp.UI.NewQuestionFragment"
+        android:label="fragment_new_question"
+        tools:layout="@layout/fragment_new_question" />
 </navigation>

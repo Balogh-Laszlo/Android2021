@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentContainerView
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
@@ -37,7 +38,13 @@ class MainActivity : AppCompatActivity() {
             // Handle menu item selected
             menuItem.isChecked = true
             drawerLayout.close()
-
+            when (menuItem.itemId) {
+                R.id.miHome -> findNavController(R.id.nhFragment).navigate(R.id.homeFragment)
+                R.id.miQuizTime -> findNavController(R.id.nhFragment).navigate(R.id.startFragment)
+                R.id.miProfile -> findNavController(R.id.nhFragment).navigate(R.id.profileFragment)
+                R.id.miListOfQuestions -> findNavController(R.id.nhFragment).navigate(R.id.questionListFragment)
+                R.id.miNewQuestion -> findNavController(R.id.nhFragment).navigate(R.id.newQuestionFragment)
+            }
             true
 
         }
