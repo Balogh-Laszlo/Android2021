@@ -23,4 +23,6 @@
     <string name="test_your_skills">TEST YOUR SKILLS</string>
     <string name="read_questions">READ QUESTIONS</string>
     <string name="create_question">CREATE QUESTION</string>
+    <string name="details">DETAILS</string>
+    <string name="delete">DELETE</string>
 </resources>

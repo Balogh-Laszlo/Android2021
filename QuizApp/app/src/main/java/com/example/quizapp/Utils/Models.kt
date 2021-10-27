@@ -15,6 +15,7 @@ enum class QuestionType {
 class SharedViewModel : ViewModel(){
     var score = MutableLiveData(0.0)
     var numOfQuestions = MutableLiveData(0)
+    var currentQuestion : Question? = null
 
     fun result(score:Double){
         this.score.value = score
