@@ -39,6 +39,9 @@ class HomeFragment : Fragment() {
         btnStartQuiz.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_startFragment)
         }
+        btnReadQuestions.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_questionListFragment)
+        }
     }
 
 
