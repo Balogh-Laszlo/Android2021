@@ -30,7 +30,9 @@ class ResultFragment : Fragment() {
         val numOfQuestion = model.numOfQuestions.value
         val temp = "$score/$numOfQuestion"
         tvScore.text = temp
-
+        if(score != null){
+            model.isHighScore(score)
+        }
         btnTryAgain.setOnClickListener {
             findNavController().navigate(R.id.action_resultFragment_to_startFragment)
         }

@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initializeView() {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nhFragment) as NavHostFragment
-        navController = navHostFragment.navController
+//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nhFragment) as NavHostFragment
+//        navController = navHostFragment.navController
         drawerLayout = findViewById(R.id.drawerLayout)
         navigationView = findViewById(R.id.navigationView)
         topAppBar = findViewById(R.id.topAppBar)

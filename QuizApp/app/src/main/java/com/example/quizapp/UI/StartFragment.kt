@@ -19,11 +19,13 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.quizapp.MainActivity
 import com.example.quizapp.ActivityResult.PickContact
 import com.example.quizapp.ActivityResult.PickPhoto
 import com.example.quizapp.R
+import com.example.quizapp.Utils.SharedViewModel
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -32,6 +34,7 @@ class StartFragment : Fragment() {
     private lateinit var etYourName: EditText
     private lateinit var btnContact: Button
     private lateinit var ivImagePicker: ImageView
+    private val model: SharedViewModel by activityViewModels()
 
 
     companion object {
@@ -81,12 +84,13 @@ class StartFragment : Fragment() {
             Log.i(TAG, "Button clicked, edit text's content: $text")
 //            Toast.makeText(this,"Button clicked, edit text's content: ${etYourName.text.toString()}",Toast.LENGTH_SHORT).show()
             if (text.isNotEmpty()) {
-                val snack = Snackbar.make(
-                    it,
-                    "Button clicked, edit text's content: ${etYourName.text}",
-                    Snackbar.LENGTH_SHORT
-                )
-                snack.show()
+//                val snack = Snackbar.make(
+//                    it,
+//                    "Button clicked, edit text's content: ${etYourName.text}",
+//                    Snackbar.LENGTH_SHORT
+//                )
+//                snack.show()
+                model.setPlayerName(text)
                 findNavController().navigate(R.id.action_startFragment_to_quizFragment)
 
 

@@ -1,5 +1,6 @@
 package com.example.quizapp.Utils
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +26,7 @@ class QuestionCardAdapter(
         private val tvType = itemView.findViewById<TextView>(R.id.tvType)
         private val btnDetails = itemView.findViewById<Button>(R.id.btnDetails)
         private val btnDelete = itemView.findViewById<Button>(R.id.btnDelete)
+        @SuppressLint("NotifyDataSetChanged")
         fun bind(position:Int){
             val item = questions[position]
             tvQuestion.text = item.text

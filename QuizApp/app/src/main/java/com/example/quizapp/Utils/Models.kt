@@ -16,12 +16,26 @@ class SharedViewModel : ViewModel(){
     var score = MutableLiveData(0.0)
     var numOfQuestions = MutableLiveData(0)
     var currentQuestion : Question? = null
+    var playerName = MutableLiveData("")
+    var highScore = MutableLiveData(0.0)
 
     fun result(score:Double){
         this.score.value = score
     }
     fun numOfQuestions(num:Int){
         this.numOfQuestions.value = num
+    }
+    fun isHighScore(score : Double){
+        if(highScore.value == null){
+            highScore.value= score
+        }
+        if(score > highScore.value!!){
+            highScore.value=score
+        }
+    }
+    fun setPlayerName(name : String){
+        playerName.value = name
+
     }
 }
 
