@@ -12,10 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quizapp.QuizController
 import com.example.quizapp.R
-import com.example.quizapp.Utils.Answer
-import com.example.quizapp.Utils.NewAnswerAdapter
-import com.example.quizapp.Utils.Question
-import com.example.quizapp.Utils.QuestionType
+import com.example.quizapp.Utils.*
 
 
 class NewQuestionFragment : Fragment() {
@@ -46,7 +43,7 @@ class NewQuestionFragment : Fragment() {
         btnSubmit.setOnClickListener {
             if(etQuestion.text.isNotEmpty()){
                 if(answers.size >1) {
-                    QuizController.listOfQuestions.add(Question(etQuestion.text.toString(),answers,QuestionType.MANY_CORRECT))
+                    QuizController.listOfQuestions.add(Question(etQuestion.text.toString(),answers,QuestionType.MANY_CORRECT,"EASY", ""))
                     findNavController().navigate(R.id.questionListFragment)
                 }
             }

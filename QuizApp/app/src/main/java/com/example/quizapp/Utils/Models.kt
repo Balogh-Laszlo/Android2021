@@ -3,7 +3,7 @@ package com.example.quizapp.Utils
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-data class Question(val text : String,var  answers : MutableList<Answer>, val type:QuestionType)
+data class Question(val text : String,var  answers : MutableList<Answer>, val type:QuestionType, val difficulty : String, val category: String )
 
 data class Answer(val answer:String,val value:Boolean)
 enum class QuestionType {
@@ -18,6 +18,8 @@ class SharedViewModel : ViewModel(){
     var currentQuestion : Question? = null
     var playerName = MutableLiveData("")
     var highScore = MutableLiveData(0.0)
+    var selectedQuestions = MutableLiveData<MutableList<Question>>()
+    val categoryList = MutableLiveData<MutableList<String>>()
 
     fun result(score:Double){
         this.score.value = score

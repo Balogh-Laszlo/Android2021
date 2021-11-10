@@ -1,43 +1,35 @@
 package com.example.quizapp
 
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.example.quizapp.Model.SinglePost
+import com.example.quizapp.Repository.Repository
 import com.example.quizapp.Utils.QuestionType
 import com.example.quizapp.Utils.Answer
 import com.example.quizapp.Utils.Question
-
+import com.example.quizapp.Utils.SharedViewModel
 
 
 class QuizController {
     companion object {
-        val listOfQuestions: MutableList<Question> = mutableListOf(
-            Question(
-                "What is the difference between the variable declaration with var and val?",
-                mutableListOf(
-                    Answer("val can't be modified var can", true),
-                    Answer("val variables can't be reached outside the class var can", false),
-                    Answer("val is dynamic declaration var is static", false)
-                ), QuestionType.ONE_CORRECT
-            ),
-            Question(
-                "What is Elvis operator in Kotlin?",
-                mutableListOf(
-                    Answer("an emoji", false),
-                    Answer("a way we can draw Elvis on the layout", false),
-                    Answer(
-                        "an operator which is used for describe what should do the code if the variable is null",
-                        true
-                    ),
-                    Answer(
-                        "it is like an if statement, represent a decision-making statement",
-                        true
-                    )
-                ), QuestionType.MANY_CORRECT
-            ),
-            Question(
-                "With which key word can we create a singleton class?",
-                mutableListOf(Answer("Object", true), Answer("object", true)),
-                QuestionType.SHORT_ANSWER
-            )
-        )
+        var listOfQuestions: MutableList<Question> = mutableListOf()
+        var listOfRawQuestions: MutableList<SinglePost> = mutableListOf()
+    }
+    init {
+        if(listOfRawQuestions.size>0){
+            listOfRawQuestions.forEach { rawQuestion ->
+                val answers :MutableList<Answer> = mutableListOf()
+                answers.add(Answer(rawQuestion.correct_answer,true))
+                rawQuestion.incorrect_answers.forEach { answer->
+                    answers.add(Answer(answer,false))
+                }
+                listOfQuestions.add(Question(rawQuestion.question,answers,QuestionType.ONE_CORRECT,rawQuestion.difficulty,rawQuestion.category))
+            }
+        }
+
+
+
     }
 
 
@@ -49,5 +41,5 @@ class QuizController {
         return listOfQuestions[questionIndex]
     }
 
-    fun size():Int = listOfQuestions.size
+    fun size():Int = 10
 }
